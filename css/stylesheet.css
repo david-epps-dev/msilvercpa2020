@@ -1,0 +1,220 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* END ======================================================================= */
+/* BP END -------------------------------------------------------------------- */
+body {
+  background-image: linear-gradient(lightgrey, white, white);
+}
+
+.business-card {
+  text-align: right;
+  position: fixed;
+  top: 30px;
+  right: 5%;
+  background: white;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 5px;
+  padding: 10px;
+  transform: rotate(15deg);
+  transition-duration: 200ms;
+
+}
+
+@media (max-width: 700px) {
+
+  .business-card {
+    position:fixed;
+    top: 60%;
+    transform: rotate(0deg);
+    transition-duration: 200ms;
+    opacity: .8;
+
+  }
+
+}
+
+#thumbnail {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.title-block {
+  padding: 5px;
+  width: 100%
+}
+
+.title-block #business-type {
+  background: maroon;
+  padding: 10px;
+}
+
+.title-block #business-sub {
+  padding: 10px;
+}
+
+.pic-headshot {
+  height: 300px;
+  width: auto;
+  position: fixed;
+  left: 70%;
+  top: 40%;
+  opacity: .6;
+}
+
+.service-statement {
+  text-align: justify;
+  margin: 20px;
+  color: maroon;
+  width: 60%;
+  font-size: 18px;
+
+}
+
+#service-head {
+    font-size: 30px;
+}
+
+#service-1 {
+  color: black;
+  width: 45%;
+  padding: 10px;
+  border-radius: 5%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#service-2 {
+  color: black;
+  width: 30%;
+  padding: 10px;
+  border-radius: 5%;
+  background: rgba(0, 0, 0, 0.1);
+  position:absolute;
+  left: 30%;
+  top: 30%;
+}
+
+#service-3 {
+  color: darkgrey;
+  width: 70%;
+  position:absolute;
+  top: 80%;
+}
+
+@media (max-width: 1200px) {
+  #service-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #service-1 {
+    /* display: none; */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #service-3 {
+    width: 30%;
+    position:absolute;
+    left: 35%;
+    top: 40%;
+  }
+}
+
+
+footer h3 {
+  color: maroon;
+  padding: 5px;
+  text-shadow: 2px 2px 8px black;
+  position: fixed;
+  top: 90%;
+  left: 10px;
+
+}
+
+@media (max-width: 700px) {
+  footer h3 {
+    font-size: 18px;
+    position: fixed;
+    top: 93%;
+  }
+}
